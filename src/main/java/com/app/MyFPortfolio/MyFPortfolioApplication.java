@@ -8,6 +8,7 @@ public class MyFPortfolioApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MyFPortfolioApplication.class, args);
+
 	}
 
 }
