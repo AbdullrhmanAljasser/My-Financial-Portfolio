@@ -2,6 +2,7 @@ package com.app.MyFPortfolio.auth;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.catalina.mbeans.UserMBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -41,7 +42,9 @@ public class AuthController {
 				response.setStatus(HttpServletResponse.SC_CONFLICT);
 				return false;
 			}
-			registered.put(user_model.getUserID().toLowerCase(), user_model);
+			
+			repository.save(new PortalProfile(user_model.getUserID(), user_model.getUserPwd(), user_model.getUserPhone(), user_model.getUserEmail()));
+
 			response.setStatus(HttpServletResponse.SC_CREATED);
 			return true;
 		} else if (user_model.getLoginType().toLowerCase().compareTo("phone") == 0) {

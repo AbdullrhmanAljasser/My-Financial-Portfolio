@@ -9,19 +9,19 @@ public class PortalProfile {
 	public String user_pwd;
 	public String user_phone;
 	public String user_email;
-	public String user_dob;
-	public String user_preference; // Loging Preference
+	// public String user_dob;
+	// public String user_preference; // Loging Preference
 	
 	public PortalProfile() {}
 	
 	public PortalProfile(String user_id, String user_pwd, String user_phone, 
-			String user_email, String user_dob, String user_preference) {
+			String user_email/*, String user_dob, String user_preference*/) {
 		this.user_id = user_id;
 		this.user_pwd = user_pwd;
 		this.user_phone = user_phone;
 		this.user_email = user_email;
-		this.user_dob = user_dob;
-		this.user_preference = user_preference;
+		// this.user_dob = user_dob;
+		// this.user_preference = user_preference;
 	}
 	
 	@Override
